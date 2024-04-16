@@ -1,0 +1,56 @@
+:root {
+    /* Main background */
+    --primary-col-bg: #FFF;
+    --primary-col-txt: #000;
+
+    /* Content background */
+    --secondary-col-bg: #EEE;
+    --secondary-col-txt: #000;
+
+    /* Call-to-action, links */
+    --accent-col-accent: #CCC;
+    --accent-col-txt: #000;
+
+    /* Borders, separators */
+    --neutral-col-neutral: #777;
+    --neutral-col-txt: #000;
+}
+
+.navbar {background-color: var(--secondary-col-bg)}
+
+.nav-link {
+    color: var(--accent-col-txt);
+    text-transform: uppercase;
+}
+
+.nav-link:hover {
+    background-color: var(--accent-col-accent);
+    color: var(--accent-col-txt);
+}
+
+.nav-link:active, .nav-link:focus {
+    background-color: var(--accent-col-accent);
+    color: var(--accent-col-txt);
+}
+
+#hero {background-color: var(--primary-col-bg)}
+
+.btn-primary {
+    background-color: var(--accent-col-accent);
+    color: var(--accent-col-txt);
+    border-color: var(--neutral-col-neutral);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-col-accent);
+    color: var(--accent-col-txt);
+    border-color: var(--neutral-col-neutral);
+    filter: brightness(75%);
+}
+
+.btn-primary:active, .btn-primary:focus {
+    background-color: var(--accent-col-accent);
+    color: var(--accent-col-txt);
+    border-color: var(--neutral-col-neutral);
+    filter: brightness(50%);
+}

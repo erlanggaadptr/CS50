@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const correctText1 = document.querySelector(".correctText1");
+                const answerButtons = document.querySelectorAll(".answerButton");
+
+                const correctText2 = document.querySelector(".correctText2");
+                const userAnswerInput = document.querySelector(".userAnswer");
+                const submitButton = document.querySelector(".submitAnswer");
+
+                answerButtons.forEach(button => {
+                    button.addEventListener("click", handleAnswerClick);
+                });
+
+                submitButton.addEventListener("click", handleAnswerSubmission);
+
+                function handleAnswerClick(event) {
+                    const button = event.target;
+                    const isCorrect = button.dataset.correctAnswer === "true";
+
+                    correctText1.innerHTML = isCorrect ? "Correct!" : "Incorrect";
+                    button.style.backgroundColor = isCorrect ? "#A5F030" : "#F05330";
+                }
+
+                function handleAnswerSubmission() {
+                    const userAnswer = userAnswerInput.value.toLowerCase();
+                    const correctAnswer = "Horse".toLowerCase();
+
+                    if (userAnswer === correctAnswer) {
+                        correctText2.innerHTML = "Correct!";
+                        userAnswerInput.style.borderColor = "#A5F030";
+                    } else {
+                        correctText2.innerHTML = "Incorrect";
+                        userAnswerInput.style.borderColor = "#F05330";
+                    }
+                }
+            })
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Which city is home to the Brandenburg Gate?</h3>
+                <button class="answerButton" data-correct-answer="false">Vienna</button>
+                <button class="answerButton" data-correct-answer="false">Zurich</button>
+                <button class="answerButton" data-correct-answer="true">Berlin</button>
+                <p class="correctText1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>Which animal can be seen on the Porsche logo?</h3>
+                <input type="text" class="userAnswer">
+                <button class="submitAnswer">Check Answer</button>
+                <p class="correctText2"></p>
+            </div>
+        </div>
+    </body>
+
+</html>
