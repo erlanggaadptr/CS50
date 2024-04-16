@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: sort1 has the fastest runtime when the values are already sorted
+
+sort2 uses: Merge sort
+
+How do you know?: sort2 has the fastest runtime out of all three sorting algorithms
+
+sort3 uses: Selection sort
+
+How do you know?: sort3 has the slowest runtime when the values are already sorted

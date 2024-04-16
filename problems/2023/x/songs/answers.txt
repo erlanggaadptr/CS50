@@ -1,0 +1,9 @@
+1. If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+
+Answer:
+I would say their audio aura is purple. Their top 100 songs have the highest average danceability score compared to energy and valence, and according to the Spotify Wrapped article, "passionate music listeners who tune in to get amped up, entertained, and moving" fall squarely within the purple aura.
+
+2. Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+
+Answer:
+Expanding the analysis to include key, loudness, speechiness, and tempo, alongside danceability, energy, and valence, could paint a more comprehensive picture of the listener's audio aura.
